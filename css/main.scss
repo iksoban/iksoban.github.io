@@ -1,0 +1,53 @@
+---
+---
+
+@charset "utf-8";
+
+$base-font-family: Times, "Times New Roman", serif;
+$base-font-size: 12pt;
+$base-font-weight: 400;
+$line-height: 1.25;
+
+$breakpt-font: 31.25rem; // also for thumbnail size
+$breakpt-center: 35.9375rem;  // also for thumbnail spacing
+
+$body-font-size: 1rem;
+$body-font-size-md: 1.2rem;
+
+$header-font-size: 1.25em;
+
+$text-color: #333;
+$link-color: #999;
+$background-color: #fff;
+
+$inline-li-spacing: 0.75em;
+
+$block-spacing: 0.5em;
+
+$top-spacing: 1em;
+$top-spacing-md: 1.5em;
+$middle-spacing: 2em;
+$bottom-spacing: 3em;
+
+$subsec-spacing: 1.12em;
+$subsec-spacing-md: 1.5em;
+$subsec-spacing-small: 0.75em;
+$subsec-spacing-image: $subsec-spacing * 3;
+$subsec-spacing-image-md: $subsec-spacing * 4.5;
+
+$side-margin-by: 0.04;
+$side-margin: 100% * $side-margin-by;
+
+$spacing-thumbnails: $subsec-spacing * 1.5;
+$spacing-thumbnails-md: $subsec-spacing * 2.33;
+$thumbnail-height: 100px;
+$thumbnail-height-md: 150px;
+
+// width of the sections at breakpt-center (92% of the breakpoint)
+$max-width: $breakpt-center * 0.92;
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout"
+;

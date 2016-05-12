@@ -1,1 +1,53 @@
-Isabella's rockin' website!
+---
+layout: default
+---
+{% assign existsInfoPage = false %}
+{% assign existsProjectPage = false %}
+{% for p in site.pages %}{% if p.info %}
+  {% assign existsInfoPage = true %}
+{% endif %}{% endfor %}
+{% for p in site.pages %}{% if p.project %}
+  {% assign existsProjectPage = true %}
+{% endif %}{% endfor %}
+
+{% assign pages = site.pages | sort:"weight" %}
+
+<header class="top">
+  <h1 class="no-bottom-margin">{{ site.title }}</h1>
+  <address class="no-top-margin"><a href="mailto:{{ site.email }}">{{ site.email }}</a></address>
+  {% if existsInfoPage %}
+  <nav class="subsec-small">
+    <ul class="inline-list">
+      {% for p in pages %}{% if p.info %}
+      <li><a href="{{ p.url | append: site.baseurl }}">{{ p.title }}</a></li>
+      {% endif %}{% endfor %}
+    </ul>
+  </nav>
+  {% endif %}
+</header>
+
+{% if existsProjectPage %}
+<main class="middle">
+  <nav>
+    <ul class="thumbnails">
+      {% for p in pages %}{% if p.project %}
+      {% capture thumbnailPre %}{{ p.url | append: "thumbnail" }}{% endcapture %}
+      {% assign thumbnailPath = false %}
+      {% for f in site.static_files %}{% if f.path contains thumbnailPre %}
+        {% assign thumbnailPath = f.path %}
+      {% endif %}
+      {% endfor %}
+      <li class="thumbnail"><a href="{{ p.url | append: site.baseurl }}">
+        {% if thumbnailPath %}<img src="{{ thumbnailPath }}"/>
+        {% else %}{{ p.title }}
+        {% endif %}
+      </a></li>
+      {% endif %}{% endfor %}
+    </ul>
+  </nav>
+</main>
+{% endif %}
+
+<footer class="bottom">
+  <address><a href="mailto:{{ site.email }}">{{ site.email }}</a></address>
+</footer>
