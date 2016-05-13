@@ -7,12 +7,10 @@
 
 # Site settings
 title: "Isabella Katarina Antolic-Soban"
-email: your-email@domain.com
-description: "Isabella's Rockin Website!"
+email: isabella.soban@domain.com
+description: "I make paintings. Check em out on my rockin' website!"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "notaurl" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "iksoban.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
