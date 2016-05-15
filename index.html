@@ -13,10 +13,9 @@ layout: default
 {% assign pages = site.pages | sort:"weight" %}
 
 <header class="top">
-  <h1 class="no-bottom-margin">{{ site.title }}</h1>
-  <address class="no-top-margin"><a href="mailto:{{ site.email }}">{{ site.email }}</a></address>
+  <h1>{{ site.title }}</h1>
   {% if existsInfoPage %}
-  <nav class="subsec-small">
+  <nav class="subsec">
     <ul class="inline-list">
       {% for p in pages %}{% if p.info %}
       <li><a href="{{ p.url | append: site.baseurl }}">{{ p.title }}</a></li>
@@ -27,7 +26,7 @@ layout: default
 </header>
 
 {% if existsProjectPage %}
-<main class="middle">
+<main class="bottom">
   <nav>
     <ul class="thumbnails">
       {% for p in pages %}{% if p.project %}
@@ -47,7 +46,3 @@ layout: default
   </nav>
 </main>
 {% endif %}
-
-<footer class="bottom">
-  <address><a href="mailto:{{ site.email }}">{{ site.email }}</a></address>
-</footer>

@@ -1,11 +1,14 @@
 ---
 layout: page
-title: About
+title: about
+no-show-title: true
 info: true
 ---
 
-This is a page about me.
+Isabella Katarina Antolić-Soban
 
-It tells you about me.
+b. 1995
 
-[{{ site.email }}](mailto:{{ site.email }})
+2017 — Fine Arts, Carnegie Mellon University
+
+[isabella.soban@gmail.com](mailto:isabella.soban@gmail.com)

@@ -29,8 +29,12 @@ ol ol, ol ul, ul ol, ul ul {
 /* header styling */
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: Lato, sans-serif;
   font-size: $header-font-size;
   font-weight: normal;
+  font-style: none;
+  text-transform: lowercase;
+  letter-spacing: 0.1em;
 }
 
 
@@ -62,9 +66,12 @@ img {
 
 a {
   color: $link-color;
-  font-style: italic;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
+}
+
+.hidden {
+  display: none;
 }
