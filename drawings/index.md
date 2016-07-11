@@ -4,5 +4,3 @@ title: drawings
 project: true
 weight: 2
 ---
-
-:^)
