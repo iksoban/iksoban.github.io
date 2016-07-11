@@ -4,5 +4,3 @@ title: paintings
 project: true
 weight: 1
 ---
-
-:~)
