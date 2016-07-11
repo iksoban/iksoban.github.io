@@ -7,7 +7,7 @@
 
 # Site settings
 title: "Isabella Katarina Antolić&#8209;Soban"
-description: "Isabella's Rockin Website!"
+description: "The artwork of Isabella Katarina"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "notaurl" # the base hostname & protocol for your site
 twitter_username: jekyllrb
