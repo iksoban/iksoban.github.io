@@ -1,48 +1,89 @@
----
-layout: default
----
-{% assign existsInfoPage = false %}
-{% assign existsProjectPage = false %}
-{% for p in site.pages %}{% if p.info %}
-  {% assign existsInfoPage = true %}
-{% endif %}{% endfor %}
-{% for p in site.pages %}{% if p.project %}
-  {% assign existsProjectPage = true %}
-{% endif %}{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-{% assign pages = site.pages | sort:"weight" %}
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Isabella Katarina Antolic-Soban</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-<header class="top">
-  <h1>{{ site.title }}</h1>
-  {% if existsInfoPage %}
-  <nav class="subsec">
-    <ul class="inline-list">
-      {% for p in pages %}{% if p.info %}
-      <li><a href="{{ p.url | append: site.baseurl }}">{{ p.title }}</a></li>
-      {% endif %}{% endfor %}
-    </ul>
-  </nav>
-  {% endif %}
-</header>
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% if existsProjectPage %}
-<main class="bottom">
-  <nav>
-    <ul class="thumbnails">
-      {% for p in pages %}{% if p.project %}
-      {% capture thumbnailPre %}{{ p.url | append: "thumbnail" }}{% endcapture %}
-      {% assign thumbnailPath = false %}
-      {% for f in site.static_files %}{% if f.path contains thumbnailPre %}
-        {% assign thumbnailPath = f.path %}
-      {% endif %}
-      {% endfor %}
-      <li class="thumbnail"><a href="{{ p.url | append: site.baseurl }}">
-        {% if thumbnailPath %}<img src="{{ thumbnailPath }}"/>
-        {% else %}{{ p.title }}
-        {% endif %}
-      </a></li>
-      {% endif %}{% endfor %}
-    </ul>
-  </nav>
-</main>
-{% endif %}
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+    <header>
+        <div class="container top">
+            <div class="row">
+                <div class="six-half columns">
+                    <h4>Isabella Katarina Antolic-Soban</h4>
+                </div>
+            </div>
+            <div class="row menu">
+                <ul>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="resume.pdf">cv</a></li>
+                    <li><a href="writings.html">writings</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+<!--    Page Content-->
+    <div class="container">
+        <div class="row">
+<!--            To change size of thumbnail images-->
+<!--            Set the class to an number from one to twelve-->
+<!--            one column = 1/12th of screen width-->
+            <div class="three columns">
+                <a href="2014.html">
+                    <img src="images/thumbnails/2014.jpg" class="u-max-full-width">
+                </a>
+            </div>
+            <div class="four columns">
+                <a href="2015.html">
+                    <img src="images/thumbnails/2015.jpg" class="u-max-full-width">
+                </a>
+            </div>
+            
+        </div>
+            
+        <div class="row">
+            <div class="four columns row-two-offset">
+            <a href="2016.html">
+                <img src="images/thumbnails/2016.jpg" class="u-max-full-width">
+            </a>
+        </div>
+        </div>
+    
+    </div>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
