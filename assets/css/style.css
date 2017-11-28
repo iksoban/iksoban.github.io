@@ -70,6 +70,16 @@ a {
 #about a:hover {
     color: #0FA0CE; }
 
+#paintings {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#drawings {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 h6 {
     font-weight: 100;
     font-size: 1.2em;
