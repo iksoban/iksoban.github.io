@@ -58,8 +58,8 @@ function toggleSubmenus() {
     $(".submenu").each(function() {
         var id = "#" + $(this).attr('id')
         if (id == currentPageSubmenu &&  $(this).is(":hidden"))
-            $(this).toggle(100);
+            $(this).toggle(200);
         else if (id != currentPageSubmenu && $(this).is(":visible"))
-            $(this).toggle(100);
+            $(this).toggle(200);
     });
 }
