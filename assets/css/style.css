@@ -1,88 +1,16 @@
-.container {
-    max-width: 1000px;
-}
-
-.navigation {
-    padding-top: 30px;
-    height: 30vh;
-    position: relative;
-}
-
-.img-navigation {
-    /* position: absolute; */
-    /* padding-bottom: 30px; */
-    /* bottom: 0; */
-    font-size: 0.9em;
-}
-
-.content {
-    height: 70vh;
-    overflow: scroll;
-}
-
-@media (min-width: 400px) {
-    .navigation {
-        padding-top: 30px;
-        height: 100vh;
-        position: relative;
-    }
-    
-    .img-navigation {
-        position: absolute;
-        padding-bottom: 30px;
-        bottom: 0;
-        font-size: 0.9em;
-    }
-
-    .content {
-        height: 100vh;
-        overflow: scroll;
-    }
-
-}
-
-
-    
-
-
-#paintings .content {
-    height: 94vh;
-    overflow: scroll;
-}
-
-#drawings .content {
-    height: 94vh;
-    overflow: scroll;
-}
-
-.image-container {
-    height: 100%;
-}
-
-.image-container img {
-    position: relative;
-    width: auto;
-    /* padding: 15px 15px; */
-    top: 50%;
-    transform: translateY(-50%);
- }
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    width: 100%;
-    margin: .2em .5em;
-}
-
+/* Style */
 li a {
     display: block;
     font-weight: 300;
     font-size: 1.0em;
     text-decoration:  none;
     font-family: 'Barlow Semi Condensed', sans-serif;
-    
+}
+
+ul {
+    list-style-type: none;
+    display: inline-block;
+
 }
 
 h1, h2, h3, h4, h5 {
@@ -94,12 +22,12 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
-.img-nav {
-    text-align: right;
+.img-navigation {
+    float: right;
 }
 
-#about {
-    padding-top: 80px;
+.img-nav {
+    text-align: right;
 }
 
 #about p a {
@@ -116,31 +44,8 @@ a {
     color: black;
 }
 
-/* Grid */
-
-#paintings {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-#drawings {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-h6 {
-    font-weight: 100;
-    font-size: 1.1em;
-}
-
-/* Navigation */
-
 .submenu {
     display: none;
-}
-
-.submenu ul {
-    margin-top: .75em;
 }
 
 ::-webkit-scrollbar {
@@ -148,7 +53,101 @@ h6 {
     background: transparent; /* make scrollbar transparent */
 }
 
+
 /* Text Size */
 h3 {
     font-size: 1.3em;
+}
+
+/* Layout */
+@media (min-width: 460px) {
+    .img-navigation {
+        float: none;
+    }
+
+    .container {
+        max-width: 1000px;
+    }
+    
+    .navigation {
+        padding-top: 30px;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .img-navigation {
+        position: absolute;
+        padding-bottom: 30px;
+        bottom: 0;
+        font-size: 0.9em;
+    }
+        
+    .content {
+        height: 100vh;
+        overflow: scroll;
+    }
+    
+    #paintings .content {
+        height: 94vh;
+        overflow: scroll;
+    }
+    
+    #drawings .content {
+        height: 94vh;
+        overflow: scroll;
+    }
+    
+    .image-container {
+        height: 100%;
+    }
+    
+    .image-container img {
+        position: relative;
+        width: auto;
+        /* padding: 15px 15px; */
+        top: 50%;
+        transform: translateY(-50%);
+     }
+    
+    
+    
+    li {
+        width: 100%;
+        margin: .2em .5em;
+    }
+    
+    
+    
+    
+    
+    #about {
+        padding-top: 80px;
+    }
+    
+    
+    
+    /* Grid */
+    
+    #paintings {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    #drawings {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    h6 {
+        font-weight: 100;
+        font-size: 1.1em;
+    }
+    
+    /* Navigation */
+    
+    
+    
+    .submenu ul {
+        margin-top: .75em;
+    }
 }
