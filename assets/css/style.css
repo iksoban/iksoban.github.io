@@ -106,3 +106,8 @@ h6 {
 .submenu ul {
     margin-top: .75em;
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
