@@ -4,21 +4,46 @@
 
 .navigation {
     padding-top: 30px;
-    height: 100vh;
+    height: 30vh;
     position: relative;
 }
 
 .img-navigation {
-    position: absolute;
-    padding-bottom: 30px;
-    bottom: 0;
+    /* position: absolute; */
+    /* padding-bottom: 30px; */
+    /* bottom: 0; */
     font-size: 0.9em;
 }
-    
+
 .content {
-    height: 100vh;
+    height: 70vh;
     overflow: scroll;
 }
+
+@media (min-width: 400px) {
+    .navigation {
+        padding-top: 30px;
+        height: 100vh;
+        position: relative;
+    }
+    
+    .img-navigation {
+        position: absolute;
+        padding-bottom: 30px;
+        bottom: 0;
+        font-size: 0.9em;
+    }
+
+    .content {
+        height: 100vh;
+        overflow: scroll;
+    }
+
+}
+
+
+    
+
 
 #paintings .content {
     height: 94vh;
