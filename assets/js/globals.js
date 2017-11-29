@@ -16,7 +16,7 @@ var images = getImages();
 function buildIndexDict() {
     var indexDictionary = {}
     for (i = 0; i < images.length; i++) {
-        indexDictionary[images[i].getAttribute('src')] = i;
+        indexDictionary[images[i].getAttribute('data-src')] = i;
     } 
     return indexDictionary;
 }
@@ -28,10 +28,10 @@ function getCurrentImageIndices() {
     var col2 = $(currentPage).find(".col2").find('img');
 
     for (i=0; i < col1.length; i++) {
-        currentImages.push(col1[i].getAttribute('src'));
+        currentImages.push(col1[i].getAttribute('data-src'));
     }
     for (i=0; i < col2.length; i++) {
-        currentImages.push(col2[i].getAttribute('src'));
+        currentImages.push(col2[i].getAttribute('data-src'));
     }
 
     var currentIndices = new Array();
