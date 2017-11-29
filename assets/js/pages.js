@@ -6,7 +6,6 @@ function initIndex() {
     $("#paintings").hide();
     $("#drawings").hide();
     $("#about").hide();
-
     slideshowWithOptions(0, getAllImageIndices());
 }
 initIndex();

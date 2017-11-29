@@ -8,6 +8,7 @@
     position: absolute;
     padding-bottom: 30px;
     bottom: 0;
+    font-size: 0.9em;
 }
     
 .content {
@@ -49,17 +50,17 @@ li {
 li a {
     display: block;
     font-weight: 300;
-    font-size: 1.2em;
+    font-size: 1.0em;
     text-decoration:  none;
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Lora', serif;
+    font-family: 'Playfair Display', serif;
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 .img-nav {
@@ -94,7 +95,7 @@ a {
 
 h6 {
     font-weight: 100;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 /* Navigation */
@@ -110,4 +111,9 @@ h6 {
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
+}
+
+/* Text Size */
+h3 {
+    font-size: 1.3em;
 }

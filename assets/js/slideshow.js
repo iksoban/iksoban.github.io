@@ -6,9 +6,9 @@ var description = document.getElementById("description");
 var numToLoad = 3;
 
 function slideshowWithOptions(startIndex, imageIndices) {
+    galleryIndices = imageIndices;
     lazyload(images);
     showIndex(startIndex);
-    galleryIndices = imageIndices;
     currentIndex = startIndex;
 }
 
@@ -22,10 +22,27 @@ function loadGalleryImages(numToLoad, currentIndex) {
 function showIndex(imageIndex) {
     loadGalleryImages(numToLoad, currentIndex);
 
-    $(images[currentIndex]).hide();
-    $(images[imageIndex]).fadeIn(500);
+    hideall(function() {
+        $(images[imageIndex]).fadeIn(500);
+    })
+
+    // if ($(images[currentIndex]).is(":visible")) {
+    //     $(images[currentIndex]).hide(0, function() {
+    //         $(images[imageIndex]).fadeIn(500);
+    //     });
+    // } else {
+    //     $(images[imageIndex]).fadeIn(500);
+    // }
+    
     currentIndex = imageIndex;
     updateDescription(currentIndex);
+}
+
+function hideall(callback) {
+    $("#slideshow").find("img").each(function(index, image) {
+        $(image).hide();
+    });
+    callback();
 }
 
 function updateDescription(index) {
