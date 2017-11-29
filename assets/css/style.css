@@ -60,6 +60,11 @@ body {
     padding-top: 80px;
 }
 
+a h3:hover {
+    text-decoration none;
+    color: black;
+}
+
 a {
     text-decoration:  none;
     color: black;
@@ -103,3 +108,7 @@ h6 {
     width: auto !important;
     height: auto !important;
   }
+
+.submenu {
+    display: none;
+}

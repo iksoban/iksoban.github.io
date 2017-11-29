@@ -1,5 +1,6 @@
 var currentIndex = 0;
 var images = new Array();
+var submenuIndices = new Array();
 
 var slideshow = document.getElementById("slideshow");
 var description = document.getElementById("description");
@@ -16,10 +17,10 @@ function startSlideshow(startIndex) {
         
     }
     updateDescription(images[startIndex]);
-    switchToIndex(startIndex);
+    switchToIndex(startIndex, submenuIndices);
 }
 
-function switchToIndex(imageIndex) {
+function switchToIndex(imageIndex, indices) {
     if (slideshow.firstChild) {
         updateDescription(images[imageIndex]);
         $(images[imageIndex]).hide().fadeOut(500);
@@ -28,6 +29,7 @@ function switchToIndex(imageIndex) {
     slideshow.appendChild(images[imageIndex])
     $(images[imageIndex]).hide().fadeIn(500);
     currentIndex = imageIndex;
+    submenuIndices = indices;
 }
 
 function updateDescription(imageElement) {
@@ -36,15 +38,26 @@ function updateDescription(imageElement) {
 }
 
 function next() {
-    nextIndex = (currentIndex + 1) % images.length;
-    switchToIndex(nextIndex)
+    if (submenuIndices.length > 0) {
+        submenuIndex = (submenuIndices.indexOf(currentIndex) + 1) % submenuIndices.length
+        nextIndex = submenuIndices[submenuIndex];
+    } else {
+        nextIndex = (currentIndex + 1) % images.length;
+    }
+    switchToIndex(nextIndex, submenuIndices)
 }
 
 function prev() {
-    prevIndex = currentIndex - 1;
-    if (prevIndex < 0) 
-        prevIndex += images.length;
-    switchToIndex(prevIndex)
+    if (submenuIndices.length > 0) {
+        prevIndex = submenuIndices.indexOf(currentIndex) - 1
+        if (prevIndex < 0)
+            prevIndex += prevIndex + submenuIndices.length;
+    } else {
+        prevIndex = currentIndex - 1;
+        if (prevIndex < 0) 
+            prevIndex += images.length;
+    }
+    switchToIndex(prevIndex, submenuIndices)
 }
 
 function buildIndexDict() {
