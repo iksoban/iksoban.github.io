@@ -6,10 +6,7 @@ function resetYear(page) {
     currentYear = ""
 }
 
-var hidden = new Array();
-var currentYear = ""
 function showYear(page, year) {
-    // Show Grid
     if (currentPage == "#index") {
         showPage(page)
     }

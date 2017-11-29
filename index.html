@@ -69,6 +69,7 @@
                             <img class="u-max-full-width" src="images/2016/large/2016_06.jpg" data-desc='Description 3'>
                             <img class="u-max-full-width" src="images/2016/large/2016_07.jpg" data-desc='Description 4'>
                             <img class="u-max-full-width" src="images/2016/large/2016_08.jpg" data-desc='Description 5'>
+                            <img class="u-max-full-width" src="images/2016/large/2016_09.jpg" data-desc='Description 2'>
                             <img class="u-max-full-width" src="images/2015/large/2015_01.jpg" data-desc='Description 6'>
                             <img class="u-max-full-width" src="images/2014/large/2014_01.jpg" data-desc='Description 7'>
                             <img class="u-max-full-width" src="images/2014/large/2014_02.jpg" data-desc='Description 8'>
@@ -82,17 +83,17 @@
                 <section id="paintings">
                     <div class="content">
                         <div class="row">
-                            <div class="six columns">
-                                <a href="#index"><img class="u-max-full-width"  src="images/2016/large/2016_04.jpg" data-year="2016" data-desc='Description 1'></a>
-                                <a href="#index"><img class="u-max-full-width"  src="images/2016/large/2016_08.jpg" data-year="2016" data-desc='Description 3'></a>
-                                <a href="#index"><img class="u-max-full-width" src="images/2014/large/2014_01.jpg" data-year="2014" data-desc='Description 3'></a>
-                                <a href="#index"><img class="u-max-full-width" src="images/2014/large/2014_03.jpg" data-year="2014" data-desc='Description 5'></a>
+                            <div class="six columns col1">
+                                <a href="#index"><img class="u-max-full-width"  src="images/2016/large/2016_04.jpg" data-year="2016"></a>
+                                <a href="#index"><img class="u-max-full-width"  src="images/2016/large/2016_08.jpg" data-year="2016"></a>
+                                <a href="#index"><img class="u-max-full-width" src="images/2014/large/2014_01.jpg" data-year="2014"></a>
+                                <a href="#index"><img class="u-max-full-width" src="images/2014/large/2014_03.jpg" data-year="2014"></a>
                             </div>
-                            <div class="six columns">
-                                    <a href="#index"><img class="u-max-full-width"  src="images/2016/large/2016_07.jpg" data-year="2016" data-desc='Description 2'></a>
-                                    <a href="#index"><img class="u-max-full-width" src="images/2015/large/2015_01.jpg" data-year="2015" data-desc='Description 2'></a>
-                                    <a href="#index"><img class="u-max-full-width" src="images/2014/large/2014_02.jpg" data-year="2014" data-desc='Description 4'></a>
-                                    <a href="#index"><img class="u-max-full-width" src="images/2014/large/2014_04.jpg" data-year="2014" data-desc='Description 6'></a>
+                            <div class="six columns col2">
+                                    <a href="#index"><img class="u-max-full-width"  src="images/2016/large/2016_07.jpg" data-year="2016"></a>
+                                    <a href="#index"><img class="u-max-full-width" src="images/2015/large/2015_01.jpg" data-year="2015"></a>
+                                    <a href="#index"><img class="u-max-full-width" src="images/2014/large/2014_02.jpg" data-year="2014"></a>
+                                    <a href="#index"><img class="u-max-full-width" src="images/2014/large/2014_04.jpg" data-year="2014"></a>
                             </div>
                         </div>
                     </div>
@@ -101,11 +102,11 @@
                 <section id="drawings">
                     <div class="content">
                         <div class="row">
-                            <div class="six columns">
+                            <div class="six columns col1">
                                 <a href="#index"><img class="u-max-full-width" src="images/2016/large/2016_05.jpg" data-year="2016"></a>
-                                <a href="#index"><img class="u-max-full-width" src="images/2016/large/2016_09.jpg" data-year="2016"></a>
+                                <a href="#index"><img class="u-max-full-width" src="images/2016/large/2016_09.jpg" data-year="2016" data-desc='Description 2'></a>
                             </div>
-                            <div class="six columns">
+                            <div class="six columns col2">
                                     <a href="#index"><img class="u-max-full-width" src="images/2016/large/2016_06.jpg" data-year="2016"></a>
                             </div>
                         </div>
@@ -131,6 +132,7 @@
 
 <!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/js/globals.js"></script>
 <script src="assets/js/pages.js"></script>
 <script src="assets/js/slideshow.js"></script>
 <script src="assets/js/grid.js"></script>
@@ -144,7 +146,6 @@
             next();
         }
     });
-    buildIndexDict();
 </script>
 
 <script>
@@ -158,25 +159,25 @@
         } else if (e.target && e.target.getAttribute('href') == "#paintings") {
             showPage("#paintings");
             e.preventDefault()
-        } else if (e.target && e.target.getAttribute('href') ==     "#paintings-2016") {
+        } else if (e.target && e.target.getAttribute('href') == "#paintings-2016") {
             showYear("#paintings", "2016");
             e.preventDefault()
-        } else if (e.target && e.target.getAttribute('href') ==     "#paintings-2015") {
+        } else if (e.target && e.target.getAttribute('href') == "#paintings-2015") {
             showYear("#paintings", "2015");
             e.preventDefault()
-        } else if (e.target && e.target.getAttribute('href') ==     "#paintings-2014") {
+        } else if (e.target && e.target.getAttribute('href') == "#paintings-2014") {
             showYear("#paintings", "2014");
             e.preventDefault()
         } else if (e.target && e.target.getAttribute('href') == "#drawings") {
             showPage("#drawings");
             e.preventDefault()
-        }  else if (e.target && e.target.getAttribute('href') ==     "#drawings-2016") {
+        }  else if (e.target && e.target.getAttribute('href') == "#drawings-2016") {
             showYear("#drawings", "2016");
             e.preventDefault()
-        } else if (e.target && e.target.getAttribute('href') ==     "#drawings-2015") {
+        } else if (e.target && e.target.getAttribute('href') == "#drawings-2015") {
             showYear("#drawings", "2015");
             e.preventDefault()
-        } else if (e.target && e.target.getAttribute('href') ==     "#drawings-2014") {
+        } else if (e.target && e.target.getAttribute('href') == "#drawings-2014") {
             showYear("#drawings", "2014");
             e.preventDefault()
         } else if (e.target && e.target.getAttribute('href') == "#about") {

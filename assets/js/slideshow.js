@@ -1,11 +1,5 @@
-var currentIndex = 0;
-var images = new Array();
-var submenuIndices = new Array();
-
 var slideshow = document.getElementById("slideshow");
 var description = document.getElementById("description");
-
-var indexDictionary = {};
 
 function startSlideshow(startIndex) {
     slideshow = document.getElementById("slideshow");
@@ -58,11 +52,4 @@ function prev() {
             prevIndex += images.length;
     }
     switchToIndex(prevIndex, submenuIndices)
-}
-
-function buildIndexDict() {
-    for (i = 0; i < images.length; i++) {
-        indexDictionary[images[i].getAttribute('src')] = i;
-    } 
-
 }
