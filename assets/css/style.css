@@ -26,6 +26,10 @@ body {
     float: right;
 }
 
+.navigation {
+    padding-top: 30px;
+}
+
 .img-nav {
     text-align: right;
 }
