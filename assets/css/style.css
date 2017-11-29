@@ -15,6 +15,16 @@
     overflow: scroll;
 }
 
+#paintings .content {
+    height: 94vh;
+    overflow: scroll;
+}
+
+#drawings .content {
+    height: 94vh;
+    overflow: scroll;
+}
+
 .image-container {
     height: 100%;
 }
