@@ -53,10 +53,12 @@ li a {
     font-size: 1.0em;
     text-decoration:  none;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    
 }
 
 h1, h2, h3, h4, h5 {
     font-family: 'Playfair Display', serif;
+    letter-spacing: .5px;
 }
 
 body {
@@ -69,6 +71,10 @@ body {
 
 #about {
     padding-top: 80px;
+}
+
+#about p a {
+    color: #1EAEDB;
 }
 
 a h3:hover {
