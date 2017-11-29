@@ -71,7 +71,7 @@ body {
 }
 
 a h3:hover {
-    text-decoration none;
+    text-decoration: none;
     color: black;
 }
 
@@ -80,10 +80,7 @@ a {
     color: black;
 }
 
-#about a {
-    color: #1EAEDB; }
-#about a:hover {
-    color: #0FA0CE; }
+/* Grid */
 
 #paintings {
     padding-top: 30px;
@@ -100,25 +97,12 @@ h6 {
     font-size: 1.2em;
 }
 
-#photos {
-    /* Prevent vertical gaps */
-    line-height: 0;
-     
-    -webkit-column-count: 5;
-    -webkit-column-gap:   0px;
-    -moz-column-count:    5;
-    -moz-column-gap:      0px;
-    column-count:         5;
-    column-gap:           0px;  
-    width: 100%;
-  }
-  
-  #photos img {
-    /* Just in case there are inline attributes */
-    width: auto !important;
-    height: auto !important;
-  }
+/* Navigation */
 
 .submenu {
     display: none;
+}
+
+.submenu ul {
+    margin-top: .75em;
 }
