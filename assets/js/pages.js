@@ -18,6 +18,13 @@ function initPages() {
 
 initPages();
 
+function loadPageImages(page) {
+    console.log(page)
+    var images = $(page).find("img").toArray();
+    console.log(images);
+    lazyload(images);
+}
+
 function showIndexWithImage(imagePath) {
     var index = indexDictionary[imagePath];
     var galleryIndices = getCurrentImageIndices()
@@ -33,6 +40,7 @@ function showIndexWithImage(imagePath) {
 function showPage(page) {
     // Reset Years
     resetYear();
+    loadPageImages(page);
     
     $(currentPage).fadeOut(100, function() {
         $(page).fadeIn(300);

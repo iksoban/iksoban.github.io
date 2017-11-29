@@ -1,7 +1,9 @@
 var slideshow = document.getElementById("slideshow");
 var description = document.getElementById("description");
+var numToLoad = 3;
 
 function startSlideshow(startIndex) {
+    loadSlideshow(numToLoad, startIndex)
     slideshow = document.getElementById("slideshow");
     while (slideshow.firstChild) {
         var image = slideshow.removeChild(slideshow.firstChild);
@@ -14,6 +16,13 @@ function startSlideshow(startIndex) {
     switchToIndex(startIndex, submenuIndices);
 }
 
+function loadSlideshow(numToLoad, currentIndex) {
+    var sliceStart = currentIndex - (numToLoad/2)
+    var sliceEnd = currentIndex + (numToLoad/2) + 1
+    var imagesToLoad = images.toArray().slice(sliceStart, sliceEnd);
+    lazyload(imagesToLoad);
+}
+
 function switchToIndex(imageIndex, indices) {
     if (slideshow.firstChild) {
         updateDescription(images[imageIndex]);
@@ -24,6 +33,7 @@ function switchToIndex(imageIndex, indices) {
     $(images[imageIndex]).hide().fadeIn(500);
     currentIndex = imageIndex;
     submenuIndices = indices;
+    loadSlideshow(numToLoad, currentIndex)
 }
 
 function updateDescription(imageElement) {
