@@ -1,11 +1,17 @@
+// Hide Everything
 function initIndex() {
+    $("#index").find("img").each( function() {
+        $(this).hide();
+    });
     $("#paintings").hide();
     $("#drawings").hide();
     $("#about").hide();
+
+    slideshowWithOptions(0, getAllImageIndices());
 }
 initIndex();
-buildIndexDict();
 
+// Get references to pages
 function initPages() {
     var docPages = document.getElementById("pages");
     for (var i = 0; i < docPages.childNodes.length; i++) {
@@ -15,30 +21,24 @@ function initPages() {
         }
     }
 }
-
 initPages();
 
-function loadPageImages(page) {
-    console.log(page)
-    var images = $(page).find("img").toArray();
-    console.log(images);
-    lazyload(images);
-}
+function showIndexWithImage(src) {
+    var page = "#index"
+    var image = getImageIndexFromSrc(src);
+    var galleryImages = getCurrentImageIndices();
 
-function showIndexWithImage(imagePath) {
-    var index = indexDictionary[imagePath];
-    var galleryIndices = getCurrentImageIndices()
-    switchToIndex(index, galleryIndices);
     $(currentPage).fadeOut(100, function() {
-        $("#index").fadeIn(300);
+        $(page).fadeIn(300);
+        slideshowWithOptions(image, galleryImages);
     });
-
-    currentPage = "#index"
     $(".img-navigation").show()
+
+    currentPage = page;
+    toggleSubmenus();
 }
 
-function showPage(page) {
-    // Reset Years
+function showPage(page, options) {
     resetYear();
     loadPageImages(page);
     
@@ -46,20 +46,14 @@ function showPage(page) {
         $(page).fadeIn(300);
     });
 
-    if (page != "#index") {
-        $(".img-navigation").hide()
-    }
+    // Hide Navigation
+    $(".img-navigation").hide()
+
     currentPage = page
     toggleSubmenus();
 }
 
-function toggleSubmenus() {
-    var currentPageSubmenu = currentPage + "-submenu"
-    $(".submenu").each(function() {
-        var id = "#" + $(this).attr('id')
-        if (id == currentPageSubmenu &&  $(this).is(":hidden"))
-            $(this).toggle(200);
-        else if (id != currentPageSubmenu && $(this).is(":visible"))
-            $(this).toggle(200);
-    });
+function loadPageImages(page) {
+    var images = $(page).find("img").toArray();
+    lazyload(images);
 }
