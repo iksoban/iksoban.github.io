@@ -57,6 +57,10 @@ a {
     background: transparent; /* make scrollbar transparent */
 }
 
+#index .content {
+    overflow: visible;
+}
+
 
 /* Text Size */
 h3 {
@@ -88,17 +92,18 @@ h3 {
         
     .content {
         height: 100vh;
-        overflow: scroll;
     }
     
     #paintings .content {
         height: 94vh;
         overflow: scroll;
+        overflow-x: visible;
     }
     
     #drawings .content {
         height: 94vh;
         overflow: scroll;
+        overflow-x: visible;
     }
     
     .image-container {
